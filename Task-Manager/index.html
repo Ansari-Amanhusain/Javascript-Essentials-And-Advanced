@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h2>Create Task</h2>
+
+  <form id="taskForm">
+    <input
+      type="text"
+      id="title"
+      placeholder="Task Title (minimum 10 characters)"
+    />
+    <br><br>
+
+    <textarea
+      id="description"
+      placeholder="Task Description"
+    ></textarea>
+    <br><br>
+
+    <input type="date" id="dueDate" />
+    <br><br>
+
+    <select id="priority">
+      <option value="">Select Priority</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+    <br><br>
+
+    <select id="status">
+      <option value="">Select Status</option>
+      <option>To Do</option>
+      <option>In Progress</option>
+      <option>Done</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <p id="message"></p>
+
+  <hr>
+
+  <h2>View Tasks</h2>
+
+  <input
+    type="text"
+    id="search"
+    placeholder="Search task by title"
+  />
+
+  <br><br>
+
+  <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <p id="noData"></p>
+
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
